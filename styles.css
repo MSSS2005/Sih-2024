@@ -6,8 +6,8 @@ body {
 
 header {
     background-color: #e0ffcd;
-    padding: 10px 40px; /* Increased padding for better spacing */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+    padding: 10px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -23,10 +23,11 @@ nav {
 
 .logo {
     height: 70px;
-    margin-right: 10px;
+    margin-right: 0;
 }
 
 .site-title {
+    margin-left: 0px;
     font-family: 'Poppins', sans-serif;        
     font-size: 1.9rem;
     font-weight: bold;
@@ -40,26 +41,25 @@ nav {
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 30px; /* Added gap for better spacing between items */
+    gap: 30px;
 }
 
 .nav-links li {
-    margin-left: 0; /* Reset margin to use gap for spacing */
-    position: relative; /* For dropdown positioning */
+    position: relative;
 }
 
 .nav-links a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    padding: 10px 15px; /* Added padding for more clickable area */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: white;
-    background-color: #FFCBA4; /* Background change on hover */
+    background-color: #FFCBA4;
 }
 
 .dropdown-content {
@@ -68,10 +68,10 @@ nav {
     background-color: white;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
-    top: 100%; /* Position dropdown below the link */
-    left: 0; /* Align dropdown with parent */
-    border-radius: 5px; /* Rounded corners for dropdown */
-    overflow: hidden; /* Ensure content does not overflow */
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .dropdown-content a {
@@ -79,7 +79,7 @@ nav {
     display: block;
     text-decoration: none;
     color: black;
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
@@ -90,7 +90,6 @@ nav {
     display: block;
 }
 
-/* Main Content */
 #main-content {
     padding: 20px;
 }
@@ -146,7 +145,6 @@ form button:hover {
     background-color: #0056b3;
 }
 
-/* Latest Information Section */
 #latest-information {
     margin: 20px auto;
     max-width: 1100px;
@@ -157,9 +155,9 @@ form button:hover {
 
 .flash-news {
     display: flex;
-    align-items: center; /* Align items in the center vertically */
-    justify-content: space-between; /* Space out the title and content */
-    gap: 20px; /* Add some space between the title and content */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .news-item {
@@ -170,16 +168,16 @@ form button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
-    flex-direction: row; /* Align items in a row */
-    align-items: center; /* Center items vertically */
+    flex-direction: row;
+    align-items: center;
 }
 
 .news-title {
     display: flex;
     align-items: center;
-    width: auto; /* Adjust width as needed */
-    margin-right: 20px; /* Space between title and content */
-    border-bottom: 2px solid #007bff; /* Blue line below the title */
+    width: auto;
+    margin-right: 20px;
+    border-bottom: 2px solid #007bff;
     padding-bottom: 5px;
 }
 
@@ -194,7 +192,6 @@ form button:hover {
     line-height: 1.5;
 }
 
-/* Footer Styles */
 footer {
     background-color: #f1f1f1;
     padding: 20px;
@@ -225,7 +222,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Marquee Styles */
 #marquee-container {
     overflow: hidden;
     white-space: nowrap;
@@ -238,7 +234,7 @@ footer {
     white-space: nowrap;
     padding-left: 100%;
     padding-right: 100%;
-    animation: marquee 20s linear infinite;
+    animation: marquee 15s linear infinite;
 }
 
 @keyframes marquee {
@@ -246,59 +242,7 @@ footer {
     100% { transform: translateX(-100%); }
 }
 
-/* Book Availability Section */
-#book-availability {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-}
-
-#book-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.form-group input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-button {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-button i {
-    margin-right: 5px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
+/* Bed Availability Section */
 #book-availability {
     width: 80%;
     max-width: 800px;
@@ -306,39 +250,59 @@ button:hover {
     padding: 20px;
     box-sizing: border-box;
     align-items: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
 }
+
+#book-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center; /* Center align the form elements */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 20px; /* Add some margin above the form */
+}
+
 .form-group {
     position: relative;
     flex: 1;
     margin-bottom: 10px;
 }
+
 .form-group input {
-    width: 100%;
+    width: 200px; /* Set a fixed width */
     padding: 10px 40px 10px 10px;
     box-sizing: border-box;
     background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
 }
+
 .form-group .icon {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
-#book-form {
-    display: flex;
-    gap: 0;
-}
-#book-form .form-group {
-    flex: 1;
-}
+
 #book-form button {
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #007BFF;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#book-form button i {
+    margin-right: 20px;
+}
+
+#book-form button:hover {
+    background-color: #0056b3;
 }
