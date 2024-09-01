@@ -27,6 +27,7 @@
                     <div class="dropdown-content" id="servicesDropdown">
                         <a href="#">Appointment Booking</a>
                         <a href="#">Bed Booking</a>
+                        <a href="#">Medicine Checking</a>
                     </div>
                 </li>
                 <li><a href="#" onclick="showContent('login')"><i class="fa fa-user"></i> Login</a></li>
@@ -57,7 +58,7 @@
         </section>
 
         <div id="book-availability">
-            <h2>Bed Availability for Booking</h2>
+            <h2>Bed Availability</h2>
             <form id="book-form">
                 <div class="form-group">
                     <input type="text" placeholder="Enter location">
@@ -72,50 +73,80 @@
         </div>
         
 
-        <section id="appointment-booking">
+        <div id="appointment-booking">
             <div class="appointment-container">
                 <div class="appointment-info">
                     <h2>Book an Appointment</h2>
                     <p>Schedule your appointment with our expert doctors in just a few clicks. Ensure timely care and consultation.</p>
+                    <p>Our team of specialized healthcare professionals is ready to assist you with personalized care. Don't delay your health check-up and take the first step towards better health.</p>
                     <button class="book-appointment-btn">Book an Appointment</button>
                 </div>
                 <div class="appointment-image">
-                    <img src="appointment.png" alt="Appointment Image">
+                    <img src="appointment.png" alt="Schedule your appointment">
+                </div>
+            </div>
+        </div>
+        
+        
+        
+
+        <section id="medicine-checking">
+            <div class="medicine-container">
+                <div class="medicine-info">
+                    <h2>Medicine Checking</h2>
+                    <p>Check your medicine information here.</p>
+                    <button class="check-medicine-btn">Check Medicine</button>
+                </div>
+                <div class="medicine-image">
+                    <img src="medicine.jpeg" alt="Medicine">
                 </div>
             </div>
         </section>
         
-
-        <section id="medicine-checking">
-            <h2>Medicine Checking</h2>
-            <form id="medicine-form">
-                <label for="medicine">Medicine:</label>
-                <input type="text" id="medicine" name="medicine">
-                <button type="submit">Check Availability</button>
-            </form>
-        </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="about-us-footer">
-                <h3>About Us</h3>
-                <p>Learn more about our mission, values, and team.</p>
-            </div>
-            <div class="highlights-footer">
-                <h3>Highlights</h3>
-                <ul>
-                    <li>Highlight 1</li>
-                    <li>Highlight 4</li>
-                    <li>Highlight 3</li>
-                </ul>
-            </div>
-            <div class="contact-us-footer">
-                <h3>Contact Us</h3>
-                <p>Get in touch with us for any inquiries or support.</p>
-            </div>
+        <!-- First Section: Social Media Links -->
+        <div class="footer-social" style="background-color: peachpuff;">
+          <p>Follow us:</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+          </div>
         </div>
-    </footer>
+      
+        <!-- Second Section: Footer Columns -->
+        <div class="footer-columns">
+          <!-- About Us Column -->
+          <div class="footer-column">
+            <h3>About Us</h3>
+        <p style="text-align: justify;">
+            City Health Integration is a healthcare management platform enhancing hospital operations with real-time data, efficient resource management, and user-friendly features for doctors, patients, and pharmacists.
+            We leverage advanced technologies like React to provide a seamless, integrated, and innovative healthcare experience.
+        </p>
+          </div>
+          
+          <!-- Highlights Column -->
+          <div class="footer-column">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Highlight 1</li>
+              <li>Highlight 2</li>
+              <li>Highlight 3</li>
+            </ul>
+          </div>
+          
+          <!-- Contact Us Column -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Email: careconnect@gmail.com</p>
+            <p>Phone:+91 93923 33125</p>
+          </div>
+        </div>
+      </footer>
+      
 
     <script src="script.js"></script>
 </body>
