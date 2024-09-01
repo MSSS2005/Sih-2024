@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Connect</title>
+    <link rel="icon" href="logo-Photoroom.png" sizes="32x32" type="image/png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #book-form {
+            display: flex;
+            gap: 10px; /* Space between the elements */
+            align-items: center; /* Vertically centers the elements */
+        }
+        .form-group {
+            display: flex;
+            align-items: center; /* Vertically aligns the icon with the input */
+        }
+        .form-group input {
+            margin-right: 5px; /* Space between the input and the icon */
+            padding: 5px; /* Padding inside the input fields */
+        }
+        button {
+            display: flex;
+            align-items: center; /* Centers the icon inside the button */
+            padding: 5px 10px; /* Button padding */
+            cursor: pointer; /* Changes the cursor on hover */
+        }
+        #hospital-results {
+            margin-top: 20px; /* Adds space between the form and the results section */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-Photoroom.png" alt="City Health Integration Logo" class="logo" />
+                <span class="site-title">Care Connect</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#" onclick="showContent('home')" class="home-icon"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li><a href="#" onclick="showContent('help')"><i class="fa fa-bars"></i> Help</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" onclick="toggleDropdown(event)"><i class="fa fa-cogs"></i> Services</a>
+                    <div class="dropdown-content" id="servicesDropdown" style="display: none;">
+                        <a href="#">Appointment Booking</a>
+                        <a href="#">Bed Booking</a>
+                    </div>
+                </li>
+                <li><a href="#" onclick="showContent('login')"><i class="fa fa-user"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div id="info">
+            <section id="about-us" style="text-align: center; background-color: #fdffcd;">
+                <h1>Welcome to Care Connect</h1>
+                <p>Our website provides a comprehensive platform for managing hospital services, including bed and medicine availability, appointment booking, and more. Explore our features to see how we can help you.</p>
+            </section>
+        </div>
+        <section id="latest-information">
+            <div class="flash-news">
+                <div class="news-item">
+                    <div class="news-title">
+                        <span class="flash-news-label">Latest Information</span>
+                    </div>
+                    <div class="news-content">
+                        <div id="marquee-container">
+                            <p id="marquee">Stay updated with the latest news and updates about our services. Check back frequently for the most recent information</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-availability">
+            <h2>Bed Availability for Booking</h2>
+            <form id="book-form" style="display: flex; gap: 10px; align-items: center;">
+              <div class="form-group" style="display: flex; align-items: center;">
+                <input type="text" id="location" name="location" placeholder="Enter location" style="margin-right: 5px;">
+                <span class="icon">📌</span>
+              </div>
+              <div class="form-group" style="display: flex; align-items: center;">
+                <input type="text" id="hospital" name="hospital" placeholder="Enter hospital" style="margin-right: 5px;">
+                <span class="icon">🏥</span>
+              </div>
+              <button type="submit" style="display: flex; align-items: center;"><i class="fa fa-search"></i> 🔎</button>
+            </form>
+            <div id="hospital-results">
+              <!-- Results will be displayed here -->
+            </div>
+          </section>
+          
+        
+        
+        
+
+        <section id="appointment-booking">
+            <h2>Appointment Booking</h2>
+            <form id="appointment-form">
+                <label for="doctor">Doctor:</label>
+                <input type="text" id="doctor" name="doctor">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <section id="medicine-checking">
+            <h2>Medicine Checking</h2>
+            <form id="medicine-form">
+                <label for="medicine">Medicine:</label>
+                <input type="text" id="medicine" name="medicine">
+                <button type="submit">Check Availability</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="about-us-footer">
+                <h3>About Us</h3>
+                <p>Learn more about our mission, values, and team.</p>
+            </div>
+            <div class="highlights-footer">
+                <h3>Highlights</h3>
+                <ul>
+                    <li>Highlight 1</li>
+                    <li>Highlight 2</li>
+                    <li>Highlight 3</li>
+                </ul>
+            </div>
+            <div class="contact-us-footer">
+                <h3>Contact Us</h3>
+                <p>Get in touch with us for any inquiries or support.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
