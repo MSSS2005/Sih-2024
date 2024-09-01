@@ -9,30 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        #book-form {
-            display: flex;
-            gap: 10px; /* Space between the elements */
-            align-items: center; /* Vertically centers the elements */
-        }
-        .form-group {
-            display: flex;
-            align-items: center; /* Vertically aligns the icon with the input */
-        }
-        .form-group input {
-            margin-right: 5px; /* Space between the input and the icon */
-            padding: 5px; /* Padding inside the input fields */
-        }
-        button {
-            display: flex;
-            align-items: center; /* Centers the icon inside the button */
-            padding: 5px 10px; /* Button padding */
-            cursor: pointer; /* Changes the cursor on hover */
-        }
-        #hospital-results {
-            margin-top: 20px; /* Adds space between the form and the results section */
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -48,7 +24,7 @@
                 <li><a href="#" onclick="showContent('help')"><i class="fa fa-bars"></i> Help</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn" onclick="toggleDropdown(event)"><i class="fa fa-cogs"></i> Services</a>
-                    <div class="dropdown-content" id="servicesDropdown" style="display: none;">
+                    <div class="dropdown-content" id="servicesDropdown">
                         <a href="#">Appointment Booking</a>
                         <a href="#">Bed Booking</a>
                     </div>
@@ -80,26 +56,20 @@
             </div>
         </section>
 
-        <section id="book-availability">
+        <div id="book-availability">
             <h2>Bed Availability for Booking</h2>
-            <form id="book-form" style="display: flex; gap: 10px; align-items: center;">
-              <div class="form-group" style="display: flex; align-items: center;">
-                <input type="text" id="location" name="location" placeholder="Enter location" style="margin-right: 5px;">
-                <span class="icon">📌</span>
-              </div>
-              <div class="form-group" style="display: flex; align-items: center;">
-                <input type="text" id="hospital" name="hospital" placeholder="Enter hospital" style="margin-right: 5px;">
-                <span class="icon">🏥</span>
-              </div>
-              <button type="submit" style="display: flex; align-items: center;"><i class="fa fa-search"></i> 🔎</button>
+            <form id="book-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Enter location">
+                    <i class="fa fa-map-marker icon"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter hospital">
+                    <i class="fa fa-hospital-o icon"></i>
+                </div>
+                <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-            <div id="hospital-results">
-              <!-- Results will be displayed here -->
-            </div>
-          </section>
-          
-        
-        
+        </div>
         
 
         <section id="appointment-booking">
@@ -132,9 +102,9 @@
             <div class="highlights-footer">
                 <h3>Highlights</h3>
                 <ul>
-                    <li>Highlight 6</li>
-                    <li>Highlight 7</li>
-                    <li>Highlight 8</li>
+                    <li>Highlight 1</li>
+                    <li>Highlight 2</li>
+                    <li>Highlight 3</li>
                 </ul>
             </div>
             <div class="contact-us-footer">
