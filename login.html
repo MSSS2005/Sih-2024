@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo-Photoroom.png" sizes="32x32" type="image/png">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('WhatsApp Image 2024-09-01 at 13.17.37_2af23e77.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            background-color: #4CAF50; /* Green */
+            margin-bottom: 10px;
+        }
+
+        .cancel-btn {
+            background-color: #f44336; /* Red */
+        }
+
+        .login-container button:hover {
+            opacity: 0.9;
+        }
+
+        .role-selection {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .role-selection label {
+            margin-right: 15px;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-link a {
+            text-decoration: none;
+            color: #007BFF; /* Blue color for the link */
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .form-group {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        
+        <!-- Role Selection -->
+        <div class="role-selection">
+            <label>
+                <input type="radio" name="role" value="doctor" onclick="showForm('doctor')"> Doctor
+            </label>
+            <label>
+                <input type="radio" name="role" value="patient" onclick="showForm('patient')"> Patient
+            </label>
+            <label>
+                <input type="radio" name="role" value="pharmacist" onclick="showForm('pharmacist')"> Pharmacist
+            </label>
+        </div>
+
+        <!-- Doctor Login Form -->
+        <div id="doctor-form" class="form-group">
+            <form action="/login-doctor" method="POST">
+                <input type="text" name="doctor-id" placeholder="Doctor ID" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Login as Doctor</button>
+            </form>
+        </div>
+
+        <!-- Patient Login Form -->
+        <div id="patient-form" class="form-group">
+            <form action="/login-patient" method="POST">
+                <input type="text" name="patient-id" placeholder="Patient ID" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Login as Patient</button>
+            </form>
+        </div>
+
+        <!-- Pharmacist Login Form -->
+        <div id="pharmacist-form" class="form-group">
+            <form action="/login-pharmacist" method="POST">
+                <input type="text" name="pharmacist-id" placeholder="Pharmacist ID" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Login as Pharmacist</button>
+            </form>
+        </div>
+
+        <!-- Cancel Button -->
+        <button type="button" class="cancel-btn" onclick="handleCancel()">Cancel</button>
+
+        <!-- Sign Up Link -->
+        <div class="signup-link">
+            <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function showForm(role) {
+            // Hide all forms initially
+            document.getElementById('doctor-form').style.display = 'none';
+            document.getElementById('patient-form').style.display = 'none';
+            document.getElementById('pharmacist-form').style.display = 'none';
+            
+            // Show the selected form
+            if (role === 'doctor') {
+                document.getElementById('doctor-form').style.display = 'block';
+            } else if (role === 'patient') {
+                document.getElementById('patient-form').style.display = 'block';
+            } else if (role === 'pharmacist') {
+                document.getElementById('pharmacist-form').style.display = 'block';
+            }
+        }
+
+        function handleCancel() {
+            // Redirect to homepage or any other page
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

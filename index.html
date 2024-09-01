@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Connect</title>
+    <link rel="icon" href="logo-Photoroom.png" sizes="32x32" type="image/png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo-Photoroom.png" alt="City Health Integration Logo" class="logo" />
+                <span class="site-title">Care Connect</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showContent('home')" class="home-icon"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#" onclick="showContent('help')"><i class="fa fa-bars"></i> Help</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" onclick="toggleDropdown(event)"><i class="fa fa-cogs"></i> Services</a>
+                    <div class="dropdown-content" id="servicesDropdown">
+                        <a href="#">Appointment Booking</a>
+                        <a href="#">Bed Booking</a>
+                        <a href="#">Medicine Search</a>
+                    </div>
+                </li>
+                <li><a href="login.html" onclick="showContent('login')"><i class="fa fa-user"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+    <div id="info">
+        <section id="about-us" style="text-align: center; background-color: #fdffcd;">
+            <h1>Welcome to Care Connect</h1>
+            <p>Our website provides a comprehensive platform for managing hospital services, including bed and medicine availability, appointment booking, and more. Explore our features to see how we can help you.</p>
+        </section>
+    </div>
+
+        <section id="latest-information">
+            <div class="flash-news">
+                <div class="news-item">
+                    <div class="news-title">
+                        <span class="flash-news-label">Latest Information</span>
+                    </div>
+                    <div class="news-content">
+                        <div id="marquee-container">
+                            <p id="marquee">Stay updated with the latest news and updates about our services. Check back frequently for the most recent information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="service-button">
+            <div id="beds" style="margin-top: 3%;">
+                <span class="service-item">
+                    <img src="bed.png" alt="Bed Booking" id="photo">
+                    <p style="color: white;">Bed Availability</p>
+                </span>
+                <span class="service-item">
+                    <img src="appoi.jpg" alt="Book Appointment" id="photo">
+                    <p style="color: white;">Book Appointment</p>
+                </span>
+                <span class="service-item">
+                    <img src="search.jpg" alt="Search Medication" id="photo">
+                    <p style="color: white;">Search Medication</p>
+                </span>
+                <span class="service-item">
+                    <img src="appstat.jpg" alt="Appointment Status" id="photo">
+                    <p style="color: white;">Appointment Status</p>
+                </span>
+            </div>
+        </section>
+        <p>Our hospital management system is designed to make healthcare more accessible and convenient for everyone.
+            Whether you need to find an available hospital bed, book an appointment, or locate essential medications, 
+            our platform provides seamless access to all these services with just a few clicks. We offer real-time updates, 
+            ensuring you always have the most accurate and up-to-date information at your fingertips. Our user-friendly 
+            interface makes it easy for anyone to navigate the system, regardless of their tech-savviness, so you can quickly find the 
+            help you need. With access to top specialists across various medical fields, our website ensures you receive the best care possible. 
+            We also support hospitals in managing their resources efficiently, leading to better patient outcomes and shorter wait times. 
+            Built with security and reliability in mind, our platform protects your personal health information while providing trustworthy
+             services you can depend on. From finding the right hospital to ensuring you get the required medication, our website is designed to 
+             support you every step of the way on your healthcare journey.<p>
+    </main>
+
+    <footer>
+        <!-- First Section: Social Media Links -->
+        <div class="footer-social">
+            <p>Follow us:</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+      
+        <!-- Second Section: Footer Columns -->
+        <div class="footer-columns">
+          <!-- About Us Column -->
+          <div class="footer-column">
+            <h3>About Us</h3>
+        <p style="text-align: justify;">
+            City Health Integration is a healthcare management platform enhancing hospital operations with real-time data, efficient resource management, and user-friendly features for doctors, patients, and pharmacists.
+            We leverage advanced technologies like React to provide a seamless, integrated, and innovative healthcare experience.
+        </p>
+          </div>
+          
+          <!-- Highlights Column -->
+          <div class="footer-column">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Highlight 1</li>
+              <li>Highlight 2</li>
+              <li>Highlight 3</li>
+            </ul>
+          </div>
+          
+          <!-- Contact Us Column -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Email: careconnect@gmail.com</p>
+            <p>Phone:+91 93923 33125</p>
+          </div>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
