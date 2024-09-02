@@ -6,7 +6,7 @@ body {
         background-image: url('bg_img2.jpg');
         background-size: cover;
         background-position: center right;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
 }
 
 header {
@@ -174,15 +174,53 @@ nav {
     object-fit: cover;
     border: 2px solid black;
 }
+#text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensure alignment at the top */
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
 
-footer {
-    background-color: #f1f1f1;
-    padding: 20px;
+#text {
+    width: 60%;
+    text-align: justify;
+    margin: 0;
+    height: auto;
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+#text-img {
+    width: 35%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: center;
 }
+
+#text-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+main {
+    padding-bottom: 500px; /* Adds space below the content to avoid overlap */
+    box-sizing: border-box; /* Ensures padding is included in height calculations */
+}
+
+footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    color: #333;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
 
 .footer-content {
     display: flex;
@@ -337,3 +375,77 @@ footer {
 .footer-column ul li {
     margin-bottom: 10px;
 }
+#text
+{
+    width:50%;
+    height: 100px;
+    text-align: justify;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#text-container {
+    display: flex; /* Use flexbox to place slideshows side by side */
+    width: 80%; /* Container width */
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#slideshow-container, .slideshow-container {
+    flex: 1; /* Each slideshow takes up equal space */
+    height: 100%; /* Occupy full height of the parent container */
+    position: relative; /* Position relative for absolute positioning of images */
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 10px;
+}
+
+.slideshow img, .static-photo img {
+    width: 100%; /* Image occupies entire width */
+    height: 100%; /* Image occupies entire height */
+    object-fit: contain; /* Fit image within container without cropping */
+    position: absolute; /* Position absolutely for animation */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    opacity: 0; /* Initial state hidden */
+    animation: slideShow 12s infinite; /* Slideshow animation duration */
+}
+
+.slideshow img:nth-child(1), .static-photo img:nth-child(1) {
+    animation-delay: 0s; /* First image starts immediately */
+}
+
+.slideshow img:nth-child(2), .static-photo img:nth-child(2) {
+    animation-delay: 4s; /* Second image starts after 4 seconds */
+}
+
+.slideshow img:nth-child(3), .static-photo img:nth-child(3) {
+    animation-delay: 8s; /* Third image starts after 8 seconds */
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    43.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
