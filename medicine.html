@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Connect - Medicine Availability Checker</title>
+    <link rel="icon" href="logo-Photoroom.png" sizes="32x32" type="image/png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="medicine.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="search-section">
+            <input type="text" placeholder="Enter medicine name or ID" class="search-bar">
+            <button class="search-btn">🔍 Search</button>
+            <button class="back-btn" onclick="goHome()">Back</button>
+        </section>
+
+        <section class="filter-section">
+            <label for="location">Pharmacy Location:</label>
+            <select id="location" class="dropdown">
+                <option value="all">All Locations</option>
+                <option value="city1">City 1</option>
+                <option value="city2">City 2</option>
+            </select>
+            <label for="availability">Availability Status:</label>
+            <select id="availability" class="dropdown">
+                <option value="all">All</option>
+                <option value="in-stock">In Stock</option>
+                <option value="out-of-stock">Out of Stock</option>
+            </select>
+        </section>
+
+        <section class="results-section">
+            <div class="medicine-card">
+                <img src="medicine.jpg" alt="Medicine Image" class="medicine-img">
+                <h2 class="medicine-name">Medicine Name</h2>
+                <p class="availability">Available</p>
+                <p class="pharmacy-name">Pharmacy Name</p>
+                <p class="price">$10.00</p>
+                <button class="details-btn" onclick="goHome()">View Details</button>
+            </div>
+            <!-- Repeat the medicine-card div for more results -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- First Section: Social Media Links -->
+        <div class="footer-social">
+            <p>Follow us:</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.youtube.com/" class="youtube"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+      
+        <!-- Second Section: Footer Columns -->
+        <div class="footer-columns">
+          <!-- About Us Column -->
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p style="text-align: justify;">
+                City Health Integration is a healthcare management platform enhancing hospital operations with real-time data, efficient resource management, and user-friendly features for doctors, patients, and pharmacists.
+                We leverage advanced technologies like React to provide a seamless, integrated, and innovative healthcare experience.
+            </p>
+          </div>
+          
+          <!-- Highlights Column -->
+          <div class="footer-column">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Highlight 1</li>
+              <li>Highlight 2</li>
+              <li>Highlight 3</li>
+            </ul>
+          </div>
+          
+          <!-- Contact Us Column -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Email: careconnect@gmail.com</p>
+            <p>Phone:+91 93923 33125</p>
+          </div>
+        </div>
+    </footer>
+
+    <script>
+        function goHome() {
+            window.location.href = "index.html"; // Navigate back to the home page
+        }
+    </script>
+</body>
+</html>
