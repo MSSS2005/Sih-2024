@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Bed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        .main h1, .main h3 {
+            margin-bottom: 20px;
+        }
+        .main input[type="text"], .main select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .main .radio-group {
+            margin: 20px 0;
+        }
+        .main .radio-group label {
+            margin-right: 15px;
+        }
+        .main button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #4CAF50;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .main button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Book Your Bed</h1>
+        <h3>Choose the type of ward</h3>
+        <form id="hospital-form">
+            <div class="radio-group">
+                <label><input type="radio" name="ward-type" value="nicu" required> NICU</label>
+                <label><input type="radio" name="ward-type" value="icu" required> ICU</label>
+                <label><input type="radio" name="ward-type" value="general" required> General Ward</label>
+            </div>
+            <label for="time-slot">Select Time Slot:</label>
+            <select id="time-slot" name="time-slot" required>
+                <option value="">Select a time slot</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('hospital-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            var wardType = document.querySelector('input[name="ward-type"]:checked').value;
+            var timeSlot = document.getElementById('time-slot').value;
+            var newURL = 'bed_result.html';
+            window.location.href = newURL;
+        });
+    </script>
+</body>
+</html>
